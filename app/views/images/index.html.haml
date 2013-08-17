@@ -6,6 +6,8 @@
         Search results for
         %b
           = @query
+      %span
+        = paginate @results
   .row-fluid
     - if @results.count > 0
       - @results.each_slice(4) do |group|
@@ -16,3 +18,4 @@
     - else
       .span12
         %p No images were found.
+  = render partial: 'shared/pagination'
