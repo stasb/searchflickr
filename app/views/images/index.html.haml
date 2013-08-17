@@ -11,9 +11,9 @@
   .row-fluid
     - if @results.count > 0
       - @results.each_slice(4) do |group|
-        .row-fluid
+        .row-fluid.image-row
           - group.each do |photo|
-            .span3
+            .span3.image-tile
               = image_tag(FlickRaw.url_m(photo))
     - else
       .span12
