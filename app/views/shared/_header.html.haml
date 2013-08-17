@@ -1,0 +1,13 @@
+.row-fluid
+  .span4
+    %h1 Search Flickr
+  .span8
+    = form_tag images_path, method: 'get' do
+      %span
+        - if params[:search]
+          = text_field_tag :search, nil, placeholder: params[:search]
+        - else
+          = text_field_tag :search, nil, placeholder: 'enter a keyword'
+      %span
+        = submit_tag 'Search', name: nil, class: 'btn btn-success'
+

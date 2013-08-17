@@ -3,6 +3,7 @@ class ImagesController < ApplicationController
   end
 
   def index
-    @results = flickr.photos.search(tags: params[:search], per_page: '10', page: '1')
+    @query = params[:search]
+    @results = flickr.photos.search(tags: @query, per_page: '20', page: '1')
   end
 end
