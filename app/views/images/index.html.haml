@@ -1,0 +1,13 @@
+.container-fluid
+  .row
+    .span6
+      %h1 Search Results
+      %p
+        - if @results.count > 0
+          - @results.each do |photo|
+            = image_tag(FlickRaw.url_m(photo))
+        - else
+          %p No images were found.
+    .span6
+      %button{class: 'btn btn-success'}
+        Bootstrap Button

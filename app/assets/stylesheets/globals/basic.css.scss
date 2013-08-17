@@ -1,0 +1,39 @@
+@import 'globals/variables';
+
+html {
+  background: white;
+}
+
+body {
+  background: white;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.container-fluid {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.container.min {
+  min-height: 500px;
+}
+
+.avatar img {
+  border-radius: 100%;
+}
+
+.weak {
+  color: $weak;
+}

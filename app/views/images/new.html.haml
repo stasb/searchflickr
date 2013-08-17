@@ -1,0 +1,11 @@
+.container-fluid
+  .row
+    .span12
+      %h1 Search Flickr
+  .row
+    .span12
+      = form_tag images_path, method: 'get' do
+        %p
+          = text_field_tag :search, nil, placeholder: 'enter your keywords'
+        %p
+          = submit_tag 'Search', name: nil, class: 'btn btn-success btn-large'

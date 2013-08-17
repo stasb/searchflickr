@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title Search Flickr
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Oxygen:400,300,700'
+    = csrf_meta_tags
+  %body
+    .content
+      - if flash[:notice]
+        .container-fluid.flash
+          .row-fluid
+            .span12
+              .alert.alert-success= flash[:notice]
+      - if flash[:error]
+        .container-fluid.flash
+          .row-fluid
+            .span1
+              .alert.alert-success= flash[:error]
+      = yield
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
