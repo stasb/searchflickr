@@ -7,14 +7,15 @@
         %b
           = @query
       %span
-        = paginate @results
+        = render partial: 'shared/pagination'
   .row-fluid
     - if @results.count > 0
       - @results.each_slice(4) do |group|
         .row-fluid.image-row
           - group.each do |photo|
             .span3.image-tile
-              = image_tag(FlickRaw.url_m(photo))
+              %a{class: 'image-link', href: '#', 'data-mfp-src' => "#{FlickRaw.url_b(photo)}"}
+                = image_tag(FlickRaw.url_m(photo))
     - else
       .span12
         %p No images were found.
