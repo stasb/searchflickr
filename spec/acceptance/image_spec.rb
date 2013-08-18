@@ -11,6 +11,7 @@ feature 'Image Search', %q{
     fill_in 'search', with: 'tokyo'
     click_button 'Search'
     expect(page).to have_content('Search results for "tokyo"')
+    expect(page).to have_css('div.image-tile', count: 20)
   end
 
   scenario 'Complete a search from an existing results page' do
@@ -21,12 +22,14 @@ feature 'Image Search', %q{
     fill_in 'search', with: 'moscow'
     click_button 'Search'
     expect(page).to have_content('Search results for "moscow"')
+    expect(page).to have_css('div.image-tile', count: 20)
   end
 
   scenario 'Complete a blank search from the home page' do
     visit root_path
     click_button 'Search'
     expect(page).to have_content('Showing the most recent images')
+    expect(page).to have_css('div.image-tile', count: 20)
   end
 
   scenario 'Complete a blank search from an existing results page' do
@@ -36,5 +39,6 @@ feature 'Image Search', %q{
     expect(page).to have_content('Search results for "tokyo"')
     click_button 'Search'
     expect(page).to have_content('Showing the most recent images')
+    expect(page).to have_css('div.image-tile', count: 20)
   end
 end
