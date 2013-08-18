@@ -1,3 +1,12 @@
+- content_for :javascript do
+  :javascript
+    $.vegas('slideshow', {
+    backgrounds:[
+      { src:'/assets/background-1.jpg', fade:2000 },
+      { src:'/assets/background-2.jpg', fade:2000 },
+      { src:'/assets/background-3.jpg', fade:2000 }
+    ]});
+
 .container-fluid
   .row-fluid
     .span12

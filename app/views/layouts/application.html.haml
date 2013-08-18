@@ -20,3 +20,4 @@
               .alert.alert-success= flash[:error]
       = yield
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = yield :javascript
