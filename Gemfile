@@ -28,3 +28,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'steak'
 end
+
+group :production do
+  gem 'rails_12factor'
+end
