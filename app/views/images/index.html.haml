@@ -15,7 +15,7 @@
           - group.each do |photo|
             .span3.image-tile
               %a{class: 'image-link', href: '#', 'data-mfp-src' => "#{FlickRaw.url_b(photo)}"}
-                = image_tag(FlickRaw.url_m(photo))
+                = image_tag(FlickRaw.url_m(photo), alt: '')
     - else
       .span12
         %p No images were found.
