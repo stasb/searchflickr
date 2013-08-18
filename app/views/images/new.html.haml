@@ -1,11 +1,11 @@
 .container-fluid
   .row-fluid
     .span12
-      %h1 Search Flickr
-  .row-fluid
+      %h1.logo-front.text-center
+        = link_to 'Search Flickr.', root_path
     .span12
-      = form_tag images_path, method: 'get' do
-        %p
-          = text_field_tag :search, nil, placeholder: 'enter your keywords'
-        %p
-          = submit_tag 'Search', name: nil, class: 'btn btn-success btn-large'
+      = form_tag images_path, method: 'get', class: 'navbar-form new-search text-center' do
+        %span
+          = text_field_tag :search, nil, placeholder: 'enter a keyword'
+        %span
+          = submit_tag 'Search', name: nil, class: 'btn btn-success'

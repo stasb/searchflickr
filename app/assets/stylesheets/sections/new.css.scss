@@ -1,0 +1,35 @@
+@import 'globals/variables';
+
+.logo-front {
+  font-size: 45px;
+  margin-left: -50px;
+  margin-top: 300px;
+  font-color: black;
+
+  a {
+    color: black;
+
+    &:hover {
+      text-decoration: none;
+      color: darken($lightBlue, 30%);
+    }
+  }
+}
+
+.new-search {
+  margin-top: 28px;
+  margin-left: -90px;
+
+  input[type=text] {
+    padding: 10px 10px 10px 10px;
+    font-size: 18px !important;
+    line-height: 24px;
+    width: 300px;
+  }
+
+  input[type=submit] {
+    padding: 10px 20px 10px 20px;
+    font-size: 18px !important;
+    margin-left: 10px;
+  }
+}

@@ -1,8 +1,9 @@
-.row-fluid
+.row-fluid.header
   .span4
-    %h1 Search Flickr
+    %h1.logo
+      = link_to 'Search Flickr.', root_path
   .span8
-    = form_tag images_path, method: 'get' do
+    = form_tag images_path, method: 'get', class: 'navbar-form header-search' do
       %span
         - if @query.empty?
           = text_field_tag :search, nil, placeholder: 'enter a keyword'

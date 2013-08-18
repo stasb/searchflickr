@@ -1,14 +1,16 @@
 .container-fluid
   = render partial: 'shared/header'
-  .row-fluid
+  .row-fluid.results-header
     .span12
       %h3
-        Search results for
-        %b
-          = @query
-      %span
-        = render partial: 'shared/pagination'
-  .row-fluid
+        - if @query.empty?
+          Showing the most recent images
+        - else
+          Search results for
+          %span
+            "#{@query}"
+  = render partial: 'shared/pagination'
+  .row-fluid.results-grid
     - if @results.count > 0
       - @results.each_slice(4) do |group|
         .row-fluid.image-row

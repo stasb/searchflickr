@@ -14,6 +14,10 @@ body {
   max-width: 1000px;
 }
 
+h1 {
+  font-family: 'Ledger', serif;
+}
+
 h2 {
   font-size: 28px;
 }
@@ -24,16 +28,4 @@ h3 {
 
 h3 {
   font-size: 18px;
-}
-
-.container.min {
-  min-height: 500px;
-}
-
-.avatar img {
-  border-radius: 100%;
-}
-
-.weak {
-  color: $weak;
 }
